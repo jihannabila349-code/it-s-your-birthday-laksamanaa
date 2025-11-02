@@ -8,7 +8,7 @@
 
 /* TEMA TNI AL */
 body {
-    background-color: #001f3f; /* Biru Tua Angkatan Laut */
+    background-color: #001f3f; /* Biru Angkatan Laut */
     color: white;
     overflow: hidden; /* Penting untuk menyembunyikan slide yang tidak aktif */
     display: flex;
