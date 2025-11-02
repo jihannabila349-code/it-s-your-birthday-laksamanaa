@@ -1,0 +1,149 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif; /* Font tegas */
+}
+
+/* TEMA TNI AL */
+body {
+    background-color: #001f3f; /* Biru Tua Angkatan Laut */
+    color: white;
+    overflow: hidden; /* Penting untuk menyembunyikan slide yang tidak aktif */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER SLIDER */
+.slider-container {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #FFD700; /* Aksen Emas/Kuning */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* STYLE SLIDE */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease, transform 1s ease;
+    cursor: pointer; /* Menandakan bisa diklik/geser */
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* WARNA UNIK PER SLIDE (Opsional) */
+.slide-1 { background-color: #001f3f; } /* Biru Tua */
+.slide-2 { background-color: #004080; } /* Biru Sedang */
+.slide-3 { background-color: #001f3f; }
+.slide-4 { background-color: #004080; }
+.slide-5 { background-color: #001f3f; }
+
+/* ELEMEN TEKS */
+h1 {
+    font-size: 3em;
+    color: #FFD700; /* Emas */
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif; /* Font Judul */
+}
+
+h2 {
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.quote-box {
+    border: 2px solid #FFFFFF;
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.slide-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 3px solid #FFD700;
+    /* Catatan: Ganti tni_al_image.jpg dengan gambar asli Anda */
+}
+
+/* SLIDE 4 - LAGU */
+.music-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF4500; /* Oranye/Merah Aksen */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.music-link:hover {
+    background-color: #CC3700;
+}
+
+/* SLIDE 5 - PENUTUP */
+.final-message {
+    font-size: 1.8em;
+    line-height: 1.5;
+}
+
+.wish-text {
+    font-size: 1.4em;
+    color: #FFC0CB; /* Pink */
+    display: block;
+    margin-top: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.emoji {
+    color: #FFD700;
+}
+
+/* ANIMASI FADE-IN (untuk mempercantik transisi elemen dalam slide) */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1.0s; }
+.delay-3 { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
